@@ -4,14 +4,19 @@ import Calculator from "./Calculator";
 function App() {
   return (
     <div
-      className="min-h-screen bg-no-repeat bg-center bg-cover bg-black w-full flex flex-col items-center gap-20 p-20"
+      className="min-h-screen bg-no-repeat bg-center bg-cover bg-black w-full flex flex-col items-center gap-14 p-20"
       style={{
         backgroundImage: `url(${backgroundImage})`,
       }}
     >
-      <h1 className="text-poe-text backdrop-blur bg-black bg-opacity-70 p-8 text-4xl rounded-xl">
-        Path Of Exile 2 Physical Weapon Damage Rune Calculator
-      </h1>
+      <div className="flex flex-col items-center p-10 blur-[1px] rounded">
+        <h1 className="text-[80px] text-white font-serif m-0">
+          Path Of Exile 2
+        </h1>
+        <h1 className="text-[40px] text-white font-serif">
+          Weapon Physical Damage Rune Calculator
+        </h1>
+      </div>
 
       <Calculator />
     </div>

@@ -3,6 +3,7 @@
 const palette = {
   poe: {
     text: "#a38d6d",
+    orange: "#af6025",
   },
 };
 

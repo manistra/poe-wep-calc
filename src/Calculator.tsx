@@ -57,30 +57,30 @@ const Calculator: React.FC = () => {
 
   return (
     <div className="w-full">
-      <div className="p-10 max-w-4xl mx-auto min-w-[500px] min-h-[200px] backdrop-blur bg-black bg-opacity-70 border border-[#af6025] rounded-xl shadow-xl w-fit">
+      <div className="p-10 max-w-4xl mx-auto min-w-[500px] min-h-[200px] backdrop-blur bg-black bg-opacity-70 border border-poe-text rounded-xl shadow-xl w-fit">
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-[#af6025] mb-1">
-              PDPS
+            <label className="block text-sm font-medium text-poe-text mb-1">
+              pDPS
             </label>
             <input
               type="number"
               value={pdps}
               onChange={(e) => setPdps(e.target.value)}
-              className="w-full px-3 py-2 bg-[#2d2d2d] border border-[#af6025] rounded-md text-[#c8c8c8] focus:ring-2 focus:ring-[#af6025] focus:outline-none"
+              className="w-full px-3 py-2 bg-[#2d2d2d] border border-poe-text rounded-md text-[#c8c8c8] focus:ring-2 focus:ring-poe-text focus:outline-none"
               placeholder="Enter PDPS"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-[#af6025] mb-1">
+            <label className="block text-sm font-medium text-poe-text mb-1">
               % increased Physical
             </label>
             <input
               type="number"
               value={increasedPhys}
               onChange={(e) => setIncreasedPhys(e.target.value)}
-              className="w-full px-3 py-2 bg-[#2d2d2d] border border-[#af6025] rounded-md text-[#c8c8c8] focus:ring-2 focus:ring-[#af6025] focus:outline-none"
+              className="w-full px-3 py-2 bg-[#2d2d2d] border border-poe-text rounded-md text-[#c8c8c8] focus:ring-2 focus:ring-poe-text focus:outline-none"
               placeholder="Enter % increased Physical"
             />
           </div>
@@ -90,7 +90,7 @@ const Calculator: React.FC = () => {
               type="checkbox"
               checked={singleRune}
               onChange={(e) => setSingleRune(e.target.checked)}
-              className="h-4 w-4 text-[#af6025] border-[#af6025] rounded bg-[#2d2d2d]"
+              className="h-4 w-4 text-poe-text border-poe-text rounded bg-[#2d2d2d]"
             />
             <label className="ml-2 block text-sm text-[#c8c8c8]">
               Calculate for only 1 rune
@@ -99,7 +99,7 @@ const Calculator: React.FC = () => {
 
           <button
             onClick={calculateResult}
-            className="w-full bg-[#af6025] text-white py-2 px-4 rounded-md hover:bg-[#8d4e1d] transition-colors"
+            className="w-full bg-poe-text text-white py-2 px-4 rounded-md hover:bg-[#8d4e1d] transition-colors"
           >
             Calculate
           </button>
