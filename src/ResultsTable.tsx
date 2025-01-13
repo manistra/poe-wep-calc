@@ -20,7 +20,7 @@ const ResultsTable: React.FC<ResultsTableProps> = ({
   if (results.length === 0) return null;
 
   return (
-    <div className="mt-6 backdrop-blur bg-black bg-opacity-70 p-10 border-poe-text border rounded-xl w-1/2 mx-auto">
+    <div className="mt-6 backdrop-blur bg-black bg-opacity-70 p-10 border-poe-text border rounded-xl min-w-[50%] mx-auto">
       <div className="flex justify-between items-center mb-2">
         <h3 className="text-lg font-medium text-poe-text">
           Calculation History:
