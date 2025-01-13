@@ -9,14 +9,14 @@ function App() {
         backgroundImage: `url(${backgroundImage})`,
       }}
     >
-      <div className="flex flex-col items-center p-10 blur-[1px] rounded">
+      {/* <div className="flex flex-col items-center p-10 blur-[1px] rounded">
         <h1 className="text-[80px] text-white font-serif m-0">
           Path Of Exile 2
         </h1>
         <h1 className="text-[40px] text-white font-serif">
           Weapon Physical Damage Rune Calculator
         </h1>
-      </div>
+      </div> */}
 
       <Calculator />
     </div>
