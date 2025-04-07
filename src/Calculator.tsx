@@ -12,7 +12,8 @@ interface CalculationResult {
 const Calculator: React.FC = () => {
   const [pdps, setPdps] = useState<string>("");
   const [increasedPhys, setIncreasedPhys] = useState<string>("");
-  const [singleRune, setSingleRune] = useState<boolean>(false);
+  const [increasedRune, setIncreasedRune] = useState<string>("0");
+
   const [results, setResults] = useState<CalculationResult[]>([]);
 
   useEffect(() => {
@@ -35,7 +36,10 @@ const Calculator: React.FC = () => {
       return;
     }
 
-    const modifier = singleRune ? 1.2 : 1.4;
+    const modifier =
+      1 + (parseFloat(increasedRune) > 0 ? parseFloat(increasedRune) / 100 : 0);
+
+    console.log(modifier);
     const calculatedResult =
       (pdpsNum / (physNum / 100 + 1)) * (physNum / 100 + modifier);
 
@@ -61,40 +65,41 @@ const Calculator: React.FC = () => {
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-poe-text mb-1">
-              pDPS
+              Total Amount
             </label>
             <input
               type="number"
               value={pdps}
               onChange={(e) => setPdps(e.target.value)}
               className="w-full px-3 py-2 bg-[#2d2d2d] border border-poe-text rounded-md text-[#c8c8c8] focus:ring-2 focus:ring-poe-text focus:outline-none"
-              placeholder="Enter PDPS"
+              placeholder="Enter Total Amount"
             />
           </div>
 
           <div>
             <label className="block text-sm font-medium text-poe-text mb-1">
-              % increased Physical
+              Percentage Increase
             </label>
             <input
               type="number"
               value={increasedPhys}
               onChange={(e) => setIncreasedPhys(e.target.value)}
               className="w-full px-3 py-2 bg-[#2d2d2d] border border-poe-text rounded-md text-[#c8c8c8] focus:ring-2 focus:ring-poe-text focus:outline-none"
-              placeholder="Enter % increased Physical"
+              placeholder="Enter Percentage Increase"
             />
           </div>
 
-          <div className="flex items-center">
-            <input
-              type="checkbox"
-              checked={singleRune}
-              onChange={(e) => setSingleRune(e.target.checked)}
-              className="h-4 w-4 text-poe-text border-poe-text rounded bg-[#2d2d2d]"
-            />
-            <label className="ml-2 block text-sm text-[#c8c8c8]">
-              Calculate for only 1 rune
+          <div>
+            <label className="block text-sm font-medium text-poe-text mb-1">
+              Rune Percentage Increase
             </label>
+            <input
+              type="number"
+              value={increasedRune}
+              onChange={(e) => setIncreasedRune(e.target.value)}
+              className="w-full px-3 py-2 bg-[#2d2d2d] border border-poe-text rounded-md text-[#c8c8c8] focus:ring-2 focus:ring-poe-text focus:outline-none"
+              placeholder="Enter Rune Percentage Increase"
+            />
           </div>
 
           <button
