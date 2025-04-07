@@ -5,6 +5,7 @@ interface CalculationResult {
   id: string;
   pdps: string;
   increasedPhys: string;
+  increasedRune: string;
   result: number;
   timestamp: number;
 }
@@ -47,6 +48,7 @@ const Calculator: React.FC = () => {
       id: Date.now().toString(),
       pdps,
       increasedPhys,
+      increasedRune,
       result: calculatedResult,
       timestamp: Date.now(),
     };

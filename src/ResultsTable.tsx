@@ -4,6 +4,7 @@ interface CalculationResult {
   id: string;
   pdps: string;
   increasedPhys: string;
+  increasedRune: string;
   result: number;
   timestamp: number;
 }
@@ -37,13 +38,16 @@ const ResultsTable: React.FC<ResultsTableProps> = ({
           <thead className="sticky top-0 bg-[#2d2d2d]">
             <tr>
               <th className="px-4 py-2 text-left border border-poe-text text-poe-text">
-                pDPS
+                Total Amount
               </th>
               <th className="px-4 py-2 text-left border border-poe-text text-poe-text">
-                % inc Phys
+                Percentage Increase
               </th>
               <th className="px-4 py-2 text-left border border-poe-text text-poe-text">
-                pDPS with Runes
+                Rune Percentage Increase
+              </th>
+              <th className="px-4 py-2 text-left border border-poe-text text-poe-text">
+                Total Amount with Runes
               </th>
               <th className="px-4 py-2 text-left border border-poe-text text-poe-text">
                 Time
@@ -58,6 +62,9 @@ const ResultsTable: React.FC<ResultsTableProps> = ({
                 </td>
                 <td className="px-4 py-2 border border-poe-text text-[#c8c8c8]">
                   {result.increasedPhys}%
+                </td>
+                <td className="px-4 py-2 border border-poe-text text-[#c8c8c8]">
+                  {result.increasedRune}%
                 </td>
                 <td className="px-4 py-2 border border-poe-text font-bold text-white">
                   {result.result.toFixed(2)}
